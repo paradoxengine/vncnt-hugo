@@ -6,13 +6,29 @@ This is a simple theme for [**hugo**](https://gohugo.io/) which can serve as a t
 
 Clone this repo into your `themes` directory of your **hugo** website:
 ```
-git clone https://github.com/fncnt/vncnt-hugo
+git clone https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
+```
+Or even better, add this repository as a submodule of your **hugo** website, if you are using `git` for it:
+```
+git submodule add https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
 ```
 
 ## Configuration
 
 Copy the `config.toml` file of the theme into the main directory of your **hugo** website.
 You may want to adjust the value of `baseURL` as well as the parameters in the `[params]` section.
+
+If you set `email` in `[params]`, the link to your email will appear in front of all keys set in `[params.contact].`
+
+### Changing Contact Links
+
+To add a link to a preferred service of your choice simply add a suitable key to `[params.contact]`, e.g.
+```
+linkedin = "https://www.linkedin.com/in/jdoe"
+```
+Please note that the key must correspond to a [fontawesome brands icon](https://fontawesome.com/icons?d=gallery&s=brands).
+Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
+However, those are trade-offs I'm willing to accept for simplicity.
 
 ### Tracking
 
