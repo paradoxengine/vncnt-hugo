@@ -30,6 +30,12 @@ Please note that the key must correspond to a [fontawesome brands icon](https://
 Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
 However, those are trade-offs I'm willing to accept for simplicity.
 
+### Tracking
+
+The theme supports Google Analytics using Hugo's internal templates. To enable
+tracking, set the [googleAnalytics](https://gohugo.io/templates/internal/#configure-google-analytics)
+and (optionally) [privacy](https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings) configuration values.
+
 ## Third-party Components
 
 This theme relies on fontawesome. The included files in `static/webfonts` are used under the SIL Open Font License 1.1 as described in `static/css/all.min.css`. The latter file is licensed under the MIT License.
